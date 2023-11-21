@@ -1,14 +1,14 @@
 #pragma once
 
-#define AUTHORS_ONE_A ""
-#define AUTHORS_ONE_B ""
-#define AUTHORS_ONE_C ""
-#define AUTHORS_ONE_D ""
-#define AUTHORS_ONE_E ""
-#define AUTHORS_ONE_F ""
+#define AUTHORS_ONE_A "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_ONE_B "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_ONE_C "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_ONE_D "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_ONE_E "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_ONE_F "Duc Anh Nguyen, Pham Diep Anh Le"
 
-#define AUTHORS_TWO_A ""
-#define AUTHORS_TWO_B ""
+#define AUTHORS_TWO_A "Duc Anh Nguyen, Pham Diep Anh Le"
+#define AUTHORS_TWO_B "Duc Anh Nguyen, Pham Diep Anh Le"
 
 #define AUTHORS_THREE_A ""
 #define AUTHORS_THREE_B ""
