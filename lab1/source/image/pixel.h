@@ -14,10 +14,10 @@ template <typename T>
 class Pixel {
     public:
         // Default constructor
-        Pixel() 
+        Pixel()
             : blue_channel(0), green_channel(0), red_channel(0){};
 
-        // Constructor with values (assuming BGR channel order)
+        // Constructor with values
         Pixel(T blue, T green, T red)
             : blue_channel(blue), green_channel(green), red_channel(red) {};
 
@@ -36,13 +36,10 @@ class Pixel {
             return red_channel;
         }
 
-        // Static attribute for channel order
-        static const ChannelOrder channel_order = ChannelOrder::BGR;
-
         // Equality operator 
         [[nodiscard]] bool operator==(const Pixel<T>& other) const noexcept {
-            return (blue_channel == other.blue_channel) 
-                && (green_channel == other.green_channel) 
+            return (blue_channel == other.blue_channel)
+                && (green_channel == other.green_channel)
                 && (red_channel == other.red_channel);
         }
     private:
@@ -50,4 +47,5 @@ class Pixel {
         T blue_channel;
         T green_channel;
         T red_channel;
+        ChannelOrder channel_order = ChannelOrder::BGR;
 };
