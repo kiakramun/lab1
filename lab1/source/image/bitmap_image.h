@@ -6,19 +6,19 @@
 
 #include "pixel.h"
 
-// Define BitmapPixel as the dependent type
-using BitmapPixel = Pixel<std::uint8_t>;
-// Define index_type as the dependent type
-using index_type = int;
-
 class BitmapImage {
     public:
+        // Define BitmapPixel as the dependent type
+        using BitmapPixel = Pixel<std::uint8_t>;
+        // Define index_type as the dependent type
+        using index_type = int;
+
         // Constructor with height and width parameters
         BitmapImage(int img_height, int img_width) 
             : height(img_height), width(img_width) {
             // Check if height and width are within the valid range
             if (height <= 0 || height > 8192 || width <= 0 || width > 8192) {
-                throw std::exception("Invalid height or width for BitmapImage");
+                throw std::exception();
             }
 
             // Initialize the pixel data with a default pixel
@@ -38,7 +38,7 @@ class BitmapImage {
         // Set Pixel at the specified position
         void set_pixel(index_type x, index_type y, const BitmapPixel& new_pixel) {
             if (x <= 0 || x > width || y <= 0 || y > height) {
-                throw std::exception("Pixel position is outside the image bounds");
+                throw std::exception();
             }
             pixel_data[y * width + x] = new_pixel;
         }
@@ -46,7 +46,7 @@ class BitmapImage {
         // Get Pixel at the specified position
         [[nodiscard]] BitmapPixel get_pixel(index_type x, index_type y) const {
             if (x <= 0 || x > width || y <= 0 || y > height) {
-                throw std::exception("Pixel position is outside the image bounds");
+                throw std::exception();
             }
             return pixel_data[y * width + x];
         }
